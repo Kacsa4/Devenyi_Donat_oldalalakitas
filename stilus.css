@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin:0;
+}
+
+main{
+    width: 80%;
+    max-width: 1000px;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+        "h h"
+        "n a"
+        "f f"
+    ;
+}
+header{
+    background-color: yellowgreen;
+    grid-area:h;
+}
+nav{
+    background-color: rgb(50, 156, 205);
+    grid-area:n;
+}
+article{
+    background-color: rgb(205, 50, 50);
+    grid-area:a;
+    padding: 10px;
+}
+footer{
+    background-color: rgb(161, 84, 184);
+    grid-area:f;
+}
+/*menü formázása*/
+nav ul{
+    padding-left: 0;
+}
+
+nav li {
+    list-style-type: none; 
+    background-color: cadetblue;
+    margin: 3px;
+    padding: 5px;
+}
+nav a{
+    text-decoration: none;
+}
+nav li:hover{
+    background-color: violet;
+}
+nav li:hover{
+    background-color: yellow;
+}
+
+
+
+@media screen and (max-width:600px){
+
+
+
+    main{
+        width: 100%;
+
+
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "h"
+        "h"
+        "n"
+        "a"
+        "f"
+    ;
+    }
+}
